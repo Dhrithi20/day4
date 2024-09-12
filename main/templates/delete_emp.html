@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <h1>do you want to delete {{employee.name}}?</h1>
+    <form method= "post">{% csrf_token %}
+        <button type ="submit">delete user</button>
+    </form>
+    <div>
+        <a href="{% url 'emp_list'%}"type="button">cancel</a>
+    </div>
+  </body>
+</html>
